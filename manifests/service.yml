@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: sergeytorotskakubernetes
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 100 
+    selector:
+        app: sergeytorotskakubernetes
