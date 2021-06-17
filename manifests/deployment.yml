@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sergeytorotskakubernetes 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sergeytorotskakubernetes
+  template:
+    metadata:
+      labels:
+        app: sergeytorotskakubernetes 
+    spec:
+      containers:
+        - name: sergeytorotskakubernetes 
+          image: acr001task.azurecr.io/sergeytorotskakubernetes
+          ports:
+          - containerPort: 100
